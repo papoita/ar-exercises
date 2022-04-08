@@ -25,8 +25,8 @@ puts "Average Annual Revenue for stores #{average_annual_revenue}"
 
 
 
-wealthy_stores = Store.where(total_revenue >= 1000000)
+wealthy_stores = Store.where("stores.annual_revenue >= 1000000").count
 #puts wealthy_stores.count
-# needs fix
+
 
 puts "The wealthy stores are #{wealthy_stores}"
